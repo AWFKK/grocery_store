@@ -1,16 +1,33 @@
-# n_store
+# Grocery_Store
 
-A new Flutter application.
 
-## Getting Started
+## ScreenShorts
 
-This project is a starting point for a Flutter application.
+<p>
+  <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/26364962/142832732-6bcfac98-2c7a-4084-ad09-0d0adc83c051.png">
+    <img src="https://user-images.githubusercontent.com/26364962/142832732-6bcfac98-2c7a-4084-ad09-0d0adc83c051.png" height="600" width="320">
+  </a>
+  
+  <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/26364962/142832738-c635eca0-c779-40aa-a356-5baf4510030b.png">
+    <img src="https://user-images.githubusercontent.com/26364962/142832738-c635eca0-c779-40aa-a356-5baf4510030b.png" height="600" width="320">
+  </a>
+  
+  <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/26364962/142832740-75d652b7-af5e-4c39-b2d7-925598075438.png">
+    <img src="https://user-images.githubusercontent.com/26364962/142832740-75d652b7-af5e-4c39-b2d7-925598075438.png" height="600" width="320">
+  </a>
+  
+  <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/26364962/142832743-28167b80-566c-40b3-aa44-3766438ac1ef.png">
+    <img src="https://user-images.githubusercontent.com/26364962/142832743-28167b80-566c-40b3-aa44-3766438ac1ef.png" height="600" width="320">
+  </a>
+  
+  <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/26364962/142832782-3c3fac1c-f376-4244-8cd7-81ecaea048a6.png">
+    <img src="https://user-images.githubusercontent.com/26364962/142832782-3c3fac1c-f376-4244-8cd7-81ecaea048a6.png" height="600" width="320">
+  </a>
+  
+  <a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/26364962/142832797-66bdb5c6-7514-4046-9dae-41a34b978dd0.png">
+    <img src="https://user-images.githubusercontent.com/26364962/142832797-66bdb5c6-7514-4046-9dae-41a34b978dd0.png" height="600" width="320">
+  </a>
+</p>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
