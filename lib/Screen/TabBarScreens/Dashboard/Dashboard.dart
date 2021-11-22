@@ -92,7 +92,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 width : MediaQuery.of(context).size.width,
                                 padding: const EdgeInsets.all(kDefaultPaddin),
                                 decoration: BoxDecoration(
-                                  color: AppColors.textInPutBG,
+                                  color: Color(0xFFF5F6F9),
                                   borderRadius: BorderRadius.circular(16),
                                 ),
                                 child: Image.asset(category[index].imagePath.toString()),

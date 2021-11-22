@@ -68,14 +68,14 @@ class _ProductDetailState extends State<ProductDetail> {
             ),
 
             Column(children: [
-             //Name And Detail
-             productNameNDetail(),
+              //Name And Detail
+              productNameNDetail(),
 
-             //Counter And Reating
-             counterAndReating(),
+              //Counter And Reating
+              counterAndReating(),
 
-             addToCart(),
-           ],)
+              addToCart(),
+            ],)
           ],
         ),
       ),
@@ -280,7 +280,7 @@ class _ProductDetailState extends State<ProductDetail> {
 
 
   //Add To Cart Button
- Widget addToCart(){
+  Widget addToCart(){
     return Container(
       margin: EdgeInsets.only(bottom:20),
       width: double.infinity,
@@ -296,6 +296,6 @@ class _ProductDetailState extends State<ProductDetail> {
         ),
       ),
     );
- }
+  }
 
 }

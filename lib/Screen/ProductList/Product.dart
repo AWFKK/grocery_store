@@ -125,7 +125,10 @@ class _ProductsState extends State<Products> {
                                 color: AppColors.textInPutBG,
                                 borderRadius: BorderRadius.circular(16),
                               ),
-                              child: Image.asset(products[index].image![0].toString()),
+                              child: Hero(
+                                tag: "${products[index].id}",
+                                child: Image.asset(products[index].image![0].toString()),
+                              ),
                             ),
                           ),
                           Padding(
