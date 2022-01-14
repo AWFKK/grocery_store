@@ -38,6 +38,10 @@ dependencies:
   flutter_svg: ^0.23.0+1
   #
   carousel_slider: ^4.0.0
+  #WebServices
+  http: ^0.13.4
+  #RX xdart
+  rxdart: ^0.27.2
 
 
 

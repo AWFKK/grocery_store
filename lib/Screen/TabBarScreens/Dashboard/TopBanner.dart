@@ -10,13 +10,13 @@ class BannerTop extends StatefulWidget {
 class _BannerTopState extends State<BannerTop> {
 
   final List<String> images = [
-    'https://images.unsplash.com/photo-1586882829491-b81178aa622e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
-    'https://images.unsplash.com/photo-1586871608370-4adee64d1794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2862&q=80',
-    'https://images.unsplash.com/photo-1586901533048-0e856dff2c0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    'https://images.unsplash.com/photo-1586902279476-3244d8d18285?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80',
-    'https://images.unsplash.com/photo-1586943101559-4cdcf86a6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1556&q=80',
-    'https://images.unsplash.com/photo-1586951144438-26d4e072b891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
-    'https://images.unsplash.com/photo-1586953983027-d7508a64f4bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80',
+    'https://graphicsfamily.com/wp-content/uploads/2020/08/Online-Shopping-AD-Banner-Design-in-Photoshop-1180x664.jpg',
+    'https://img.freepik.com/free-vector/sale-banner-template-design_74379-121.jpg?size=626&ext=jpg',
+    'https://static.vecteezy.com/system/resources/thumbnails/000/692/266/small/sale-promotion-banner-template.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDo4N9XpE3gdt_wn3bWPZRdcdY5LelAt132olfrwQP4knZ-3h_8R1pBoVGj_AJtTrmXwU&usqp=CAU',
+    'https://image.freepik.com/free-psd/fast-food-concept-banner-template_23-2148777966.jpg',
+    'https://assets.materialup.com/uploads/3d93aeff-2058-4e83-bb26-92a2fae5ba2d/preview.jpg',
+    'https://cdn.dribbble.com/users/1520130/screenshots/11008333/media/29cb675171cadd88e289ed9872e47b1c.jpg?compress=1&resize=400x300',
   ];
 
 

@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:n_store/Helper/constants.dart';
+import 'package:n_store/ModelClasses/ModelCategory.dart';
 import 'package:n_store/ModelClasses/ModelProduct.dart';
 import 'package:n_store/Screen/ProductDetail/ProductDetail.dart';
 import 'package:n_store/styles/colors.dart';
@@ -23,7 +24,32 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
 
 
-  List<String> subCategories = ["Hand bag", "Jewellery", "Footwear", "Dresses"];
+  List<CategoryItem> category = [
+    CategoryItem(
+      name: "Fresh Fruits & Vegetables",
+      imagePath: "assets/images/categories_images/fruit.png",
+    ),
+    CategoryItem(
+      name: "Cooking Oil",
+      imagePath: "assets/images/categories_images/oil.png",
+    ),
+    CategoryItem(
+      name: "Meat & Fish",
+      imagePath: "assets/images/categories_images/meat.png",
+    ),
+    CategoryItem(
+      name: "Bakery & Snacks",
+      imagePath: "assets/images/categories_images/bakery.png",
+    ),
+    CategoryItem(
+      name: "Dairy & Eggs",
+      imagePath: "assets/images/categories_images/dairy.png",
+    ),
+    CategoryItem(
+      name: "Beverages",
+      imagePath: "assets/images/categories_images/beverages.png",
+    ),
+  ];
   // By default our first item will be selected
   int selectedIndex = 0;
 
@@ -47,7 +73,7 @@ class _ProductsState extends State<Products> {
             icon: SvgPicture.asset(
               "assets/icons/search_icon.svg",
               // By default our  icon color is white
-              color: AppColors.NewColor,
+              color: AppColors.themeColor,
             ),
             onPressed: () {},
           ),
@@ -55,7 +81,7 @@ class _ProductsState extends State<Products> {
             icon: SvgPicture.asset(
               "assets/icons/cart_icon.svg",
               // By default our  icon color is white
-              color: AppColors.NewColor,
+              color: AppColors.themeColor,
             ),
             onPressed: () {
               print('Cart Products');
@@ -75,7 +101,7 @@ class _ProductsState extends State<Products> {
               widget.categoryName.toString(),
               style: Theme.of(context)
                   .textTheme
-                  .headline5?.copyWith(fontWeight: FontWeight.bold, color: AppColors.NewColor,),
+                  .headline5?.copyWith(fontWeight: FontWeight.bold, color: AppColors.themeColor,),
             ),
           ),
 
@@ -86,7 +112,7 @@ class _ProductsState extends State<Products> {
               height: 25,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: subCategories.length,
+                itemCount: category.length,
                 itemBuilder: (context, index) => buildCategory(index),
               ),
             ),
@@ -124,6 +150,14 @@ class _ProductsState extends State<Products> {
                               decoration: BoxDecoration(
                                 color: AppColors.textInPutBG,
                                 borderRadius: BorderRadius.circular(16),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.1),
+                                    spreadRadius: 2,
+                                    blurRadius: 3,
+                                    offset: Offset(0, 1), // changes position of shadow
+                                  ),
+                                ],
                               ),
                               child: Hero(
                                 tag: "${products[index].id}",
@@ -136,12 +170,12 @@ class _ProductsState extends State<Products> {
                             child: Text(
                               // products is out demo list
                               products[index].title.toString(),
-                              style: TextStyle(color: kTextLightColor),
+                              style: TextStyle(color: kTextLightColor, fontWeight: FontWeight.bold),
                             ),
                           ),
                           Text(
                             "\$${products[index].price}",
-                            style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.NewColor,),
+                            style: TextStyle(fontWeight: FontWeight.bold, color: AppColors.themeColor,),
                           )
                         ],
                       ),
@@ -170,7 +204,7 @@ class _ProductsState extends State<Products> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              subCategories[index],
+              category[index].name.toString(),
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: selectedIndex == index ? kTextColor : kTextLightColor,
@@ -180,7 +214,7 @@ class _ProductsState extends State<Products> {
               margin: const EdgeInsets.only(top: kDefaultPaddin / 4), //top padding 5
               height: 2,
               width: 30,
-              color: selectedIndex == index ? AppColors.NewColor : Colors.transparent,
+              color: selectedIndex == index ? AppColors.themeColor : Colors.transparent,
             )
           ],
         ),

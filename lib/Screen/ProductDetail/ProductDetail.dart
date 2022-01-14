@@ -20,6 +20,7 @@ class ProductDetail extends StatefulWidget {
 class _ProductDetailState extends State<ProductDetail> {
 
   int selectedImage = 0;
+  int counter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -100,7 +101,7 @@ class _ProductDetailState extends State<ProductDetail> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-              color: AppColors.NewColor.withOpacity(selectedImage == index ? 1 : 0)),
+              color: AppColors.themeColor.withOpacity(selectedImage == index ? 1 : 0)),
         ),
         child: Image.asset(widget.product.image![index]),
       ),
@@ -110,13 +111,21 @@ class _ProductDetailState extends State<ProductDetail> {
   //Product Name And Detail
   Widget productNameNDetail(){
     return Container(
-      margin: EdgeInsets.only(top: 20),
-      padding: EdgeInsets.only(top: 20, bottom: 20),
+      margin: EdgeInsets.only(top: 20, right: 5, left: 5),
+      padding: EdgeInsets.symmetric(vertical: 20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
-            Radius.circular(40)
+            Radius.circular(20)
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.1),
+            spreadRadius: 2,
+            blurRadius: 3,
+            offset: Offset(0, 1), // changes position of shadow
+          ),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -178,7 +187,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   Text(
                     "See More Detail",
                     style: TextStyle(
-                        fontWeight: FontWeight.w600, color: AppColors.NewColor),
+                        fontWeight: FontWeight.w600, color: AppColors.themeColor),
                   ),
                   SizedBox(width: 5),
                   Icon(
@@ -202,13 +211,6 @@ class _ProductDetailState extends State<ProductDetail> {
   Widget counterAndReating() {
     return Container(
       margin: EdgeInsets.all(20.0),
-      decoration: BoxDecoration(
-        color: Color(0xFFF6F7F9),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(40),
-          topRight: Radius.circular(40),
-        ),
-      ),
       child: Row(
         children: [
 
@@ -217,12 +219,20 @@ class _ProductDetailState extends State<ProductDetail> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(14),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.1),
+                  spreadRadius: 2,
+                  blurRadius: 3,
+                  offset: Offset(0, 1), // changes position of shadow
+                ),
+              ],
             ),
             child: Row(
               children: [
-                Text(
+                const Text(
                   "4.8",
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),
@@ -235,7 +245,12 @@ class _ProductDetailState extends State<ProductDetail> {
 
           Spacer(),
           InkWell(
-            onTap: (){},
+            onTap: (){
+              if(counter > 1)
+              setState(() {
+                counter--;
+              });
+            },
             child: Container(
               height: 40,
               width: 40,
@@ -250,12 +265,19 @@ class _ProductDetailState extends State<ProductDetail> {
                   ),
                 ],
               ),
-              child: Icon(Icons.remove,color: AppColors.NewColor,),
+              child: Icon(Icons.remove,color: AppColors.themeColor,),
             ),
           ),
-          SizedBox(width: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Text(counter.toString(),style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),),
+          ),
           InkWell(
-            onTap: (){},
+            onTap: (){
+              setState(() {
+                counter++;
+              });
+            },
             child: Container(
               height: 40,
               width: 40,
@@ -270,7 +292,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   ),
                 ],
               ),
-              child: Icon(Icons.add,color: AppColors.NewColor),
+              child: Icon(Icons.add,color: AppColors.themeColor),
             ),
           ),
         ],

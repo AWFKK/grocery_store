@@ -40,7 +40,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
             icon: SvgPicture.asset(
               "assets/icons/search_icon.svg",
               // By default our  icon color is white
-              color: AppColors.NewColor,
+              color: AppColors.themeColor,
             ),
             onPressed: () {},
           ),
@@ -48,7 +48,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
             icon: SvgPicture.asset(
               "assets/icons/cart_icon.svg",
               // By default our  icon color is white
-              color: AppColors.NewColor,
+              color: AppColors.themeColor,
             ),
             onPressed: () {
               print('Cart Tab Bar');
@@ -75,7 +75,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
           child: BottomNavigationBar(
             showSelectedLabels: false,
             showUnselectedLabels: false,
-            selectedItemColor: AppColors.NewColor,
+            selectedItemColor: AppColors.themeColor,
 
             type: BottomNavigationBarType.fixed,
             currentIndex: currentIndex,

@@ -12,7 +12,7 @@ class AppColors {
   static const primaryColor = Color(0xff53B175);
   static const bgColor = Color(0xFFF6F7F9);
   static const NewprimaryColor = Color(0xFFFF7643);
-  static var NewColor = HexToColor("#0f172a");
+  static var themeColor = HexToColor("#0f172a");
   static var textInPutBG = HexToColor("#e3ebf2");
   static var textColor = HexToColor("#838C9A");
   static const darkGrey = Color(0xff7C7C7C);

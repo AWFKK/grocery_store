@@ -167,7 +167,7 @@ class _SignUpState extends State<SignUp> {
                   style: TextStyle(
                       fontSize: 18.0,
                       height: 1.0,
-                      fontWeight: FontWeight.w400,color: AppColors.NewColor
+                      fontWeight: FontWeight.w400,color: AppColors.themeColor
                   ),
                   keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
@@ -187,7 +187,7 @@ class _SignUpState extends State<SignUp> {
                             ? Icons.visibility_off
                             : Icons.remove_red_eye,
                         size: 25.0,
-                        color: AppColors.NewColor,
+                        color: AppColors.themeColor,
                       ),
                     ),
                   ),
@@ -205,7 +205,7 @@ class _SignUpState extends State<SignUp> {
                   height: 45,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: AppColors.NewColor,
+                    color: AppColors.themeColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
@@ -298,7 +298,7 @@ class _SignUpState extends State<SignUp> {
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                       textAlign: TextAlign.justify,
-                      color: AppColors.NewColor,
+                      color: AppColors.themeColor,
                     ),
                   ),
                 ],

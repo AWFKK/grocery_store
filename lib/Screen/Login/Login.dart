@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:n_store/Helper/RequestManager.dart';
 import 'package:n_store/Screen/ForgotPasswprd/Forgotpassword.dart';
 import 'package:n_store/Screen/SignUp/SignUp.dart';
 import 'package:n_store/Screen/TabBarScreens/TabBar/TabBarScreen.dart';
@@ -38,19 +39,19 @@ class _LoginState extends State<Login> {
 
               SizedBox(height: MediaQuery.of(context).size.height/5,),
 
-              AppText(
+              const AppText(
                 text: "Oh hi,Sign in here",
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
                 //color: AppColors.NewColor,
               ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
 
 
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width - MediaQuery.of(context).size.width/3,
-                child: AppText(
+                child: const AppText(
                   text: "Create an account so you can order your favorite food even faster",
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
@@ -61,7 +62,7 @@ class _LoginState extends State<Login> {
               SizedBox(height: 30,),
 
               //User Name
-              new Container(
+              Container(
                 height: 45,
                 padding: EdgeInsets.only(left: 10, right: 10),
                 decoration: BoxDecoration(
@@ -70,13 +71,13 @@ class _LoginState extends State<Login> {
                 ),
                 child: TextFormField(
                   controller: _emailController,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontSize: 18.0,
                       height: 1.0,
                       fontWeight: FontWeight.w400
                   ),
                   keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: InputBorder.none,
                     hintText: "Email",
                     hintStyle: TextStyle(
@@ -105,7 +106,7 @@ class _LoginState extends State<Login> {
                   style: TextStyle(
                       fontSize: 18.0,
                       height: 1.0,
-                      fontWeight: FontWeight.w400,color: AppColors.NewColor
+                      fontWeight: FontWeight.w400,color: AppColors.themeColor
                   ),
                   keyboardType: TextInputType.visiblePassword,
                   decoration: InputDecoration(
@@ -125,7 +126,7 @@ class _LoginState extends State<Login> {
                             ? Icons.visibility_off
                             : Icons.remove_red_eye,
                         size: 25.0,
-                        color: AppColors.NewColor,
+                        color: AppColors.themeColor,
                       ),
                     ),
                   ),
@@ -162,15 +163,16 @@ class _LoginState extends State<Login> {
                     context,
                     MaterialPageRoute(builder: (context) => TabBarScreen()),
                   );
+                  //_login();
                 },
                 child: Container(
                   height: 45,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: AppColors.NewColor,
+                    color: AppColors.themeColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: AppText(
                       text: "Continue",
                       fontSize: 18,
@@ -206,7 +208,7 @@ class _LoginState extends State<Login> {
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                       textAlign: TextAlign.justify,
-                      color: AppColors.NewColor,
+                      color: AppColors.themeColor,
                     ),
                   ),
                 ],
@@ -219,4 +221,24 @@ class _LoginState extends State<Login> {
       ),
     );
   }
+
+  //Login
+  _login() async {
+
+    var param = {
+      "email": "abdulwahabfaiz@gmail.com",
+      "password": "123456",
+    };
+
+    var manager = Requestmanager();
+    var data = await manager.login(param);
+    print("User data: ===== >>>>>>${data!.message}");
+    if(data.error == true){
+      print("Success");
+    }else{
+      print("False");
+    }
+
+  }
+
 }

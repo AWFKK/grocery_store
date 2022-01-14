@@ -21,7 +21,7 @@ List<Product> products = [
   Product(
       id: 1,
       title: "Organic Bananas",
-      price: 234,
+      price: 10,
       size: 12,
       description: "7pcs, Priceg",
       image: ["assets/images/grocery_images/banana.png"],
@@ -29,7 +29,7 @@ List<Product> products = [
   Product(
       id: 2,
       title: "Red Apple",
-      price: 234,
+      price: 10,
       size: 8,
       description: "1kg, Priceg",
       image: ["assets/images/grocery_images/apple.png"],
@@ -37,7 +37,7 @@ List<Product> products = [
   Product(
       id: 3,
       title: "Bell Pepper Red",
-      price: 234,
+      price: 10,
       size: 10,
       description: "1kg, Priceg",
       image: ["assets/images/grocery_images/pepper.png",
@@ -46,7 +46,7 @@ List<Product> products = [
   Product(
       id: 4,
       title: "Ginger",
-      price: 234,
+      price: 10,
       size: 11,
       description: "250gm, Priceg",
       image: ["assets/images/grocery_images/ginger.png"],
@@ -54,7 +54,7 @@ List<Product> products = [
   Product(
       id: 5,
       title: "beef",
-      price: 234,
+      price: 10,
       size: 12,
       description: "1kg, Priceg",
       image: ["assets/images/grocery_images/beef.png"],
@@ -62,7 +62,7 @@ List<Product> products = [
     Product(
     id: 6,
     title: "Chicken",
-    price: 234,
+    price: 10,
     size: 12,
     description: "1kg, Priceg",
     image: ["assets/images/grocery_images/chicken.png"],
@@ -72,7 +72,7 @@ List<Product> products = [
   Product(
     id: 7,
     title: "PS4 Controller",
-    price: 234,
+    price: 10,
     size: 12,
     description: "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …",
     image: [

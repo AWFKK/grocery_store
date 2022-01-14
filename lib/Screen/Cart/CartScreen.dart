@@ -33,7 +33,7 @@ class _CartScreenState extends State<CartScreen> {
           children: [
             Text(
               "Your Cart",
-              style: TextStyle(color: AppColors.NewColor),
+              style: TextStyle(color: AppColors.themeColor),
             ),
             Text(
               "${demoCarts.length} items",
@@ -117,7 +117,7 @@ class _CartScreenState extends State<CartScreen> {
               TextSpan(
                 text: "\$${demoCart.product.price}",
                 style: TextStyle(
-                    fontWeight: FontWeight.w600, color: AppColors.NewColor),
+                    fontWeight: FontWeight.w600, color: AppColors.themeColor),
                 children: [
                   TextSpan(
                       text: " x${demoCart.numOfItem}",
@@ -170,7 +170,7 @@ class _CartScreenState extends State<CartScreen> {
                     color: Color(0xFFF5F6F9),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: SvgPicture.asset("assets/icons/receipt.svg", color: AppColors.NewColor,),
+                  child: SvgPicture.asset("assets/icons/receipt.svg", color: AppColors.themeColor,),
                 ),
                 Spacer(),
                 InkWell(
@@ -196,7 +196,7 @@ class _CartScreenState extends State<CartScreen> {
                     children: [
                       TextSpan(
                         text: "\$337.15",
-                        style: TextStyle(fontSize: 16, color: AppColors.NewColor, fontWeight: FontWeight.w500),
+                        style: TextStyle(fontSize: 16, color: AppColors.themeColor, fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),

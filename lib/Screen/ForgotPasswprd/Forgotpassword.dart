@@ -89,7 +89,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   height: 45,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: AppColors.NewColor,
+                    color: AppColors.themeColor,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(

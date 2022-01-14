@@ -64,6 +64,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 ),
               ),
 
+              //Categories Grid List
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: GridView.count(
@@ -82,6 +83,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           )),
                         );
                       },
+                      //Grid Item
                       child: Container(
                         padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10, right: 10),
                         child: Column(
@@ -92,9 +94,18 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                 width : MediaQuery.of(context).size.width,
                                 padding: const EdgeInsets.all(kDefaultPaddin),
                                 decoration: BoxDecoration(
-                                  color: Color(0xFFF5F6F9),
+                                  color: AppColors.textInPutBG,
                                   borderRadius: BorderRadius.circular(16),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.1),
+                                      spreadRadius: 2,
+                                      blurRadius: 3,
+                                      offset: Offset(0, 1), // changes position of shadow
+                                    ),
+                                  ],
                                 ),
+
                                 child: Image.asset(category[index].imagePath.toString()),
                               ),
                             ),
@@ -103,7 +114,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               child: Text(
                                 // products is out demo list
                                 category[index].name.toString(),
-                                style: TextStyle(color: AppColors.NewColor, fontWeight: FontWeight.bold),
+                                style: TextStyle(color: AppColors.themeColor, fontWeight: FontWeight.bold),
                               ),
                             ),
 
