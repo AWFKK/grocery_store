@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:n_store/Helper/constants.dart';
 import 'package:n_store/ModelClasses/ModelCategory.dart';
 import 'package:n_store/Screen/ProductList/Product.dart';
@@ -47,6 +48,25 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text(myAppName, style:TextStyle(color: AppColors.darkGrey)),
+        actions: <Widget>[
+          IconButton(
+            icon: SvgPicture.asset(
+              "assets/icons/cart_icon.svg",
+              // By default our  icon color is white
+              color: AppColors.themeColor,
+            ),
+            onPressed: () {
+              print('Cart Tab Bar');
+            },
+          ),
+        ],
+      ),
       body: Container(
         child: SingleChildScrollView(
           physics: BouncingScrollPhysics(),

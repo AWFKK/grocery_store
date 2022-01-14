@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:n_store/common_widgets/app_text.dart';
 import 'package:n_store/styles/colors.dart';
 
@@ -14,6 +15,25 @@ class _OrderScreenState extends State<OrderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text("Orders", style:TextStyle(color: AppColors.darkGrey)),
+        actions: <Widget>[
+          IconButton(
+            icon: SvgPicture.asset(
+              "assets/icons/cart_icon.svg",
+              // By default our  icon color is white
+              color: AppColors.themeColor,
+            ),
+            onPressed: () {
+              print('Cart Tab Bar');
+            },
+          ),
+        ],
+      ),
       body: Container(
         child: _setOrderList(),
       ),

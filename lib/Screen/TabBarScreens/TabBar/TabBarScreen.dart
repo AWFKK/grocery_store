@@ -30,33 +30,6 @@ class _TabBarScreenState extends State<TabBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        title: const Text(myAppName, style:TextStyle(color: AppColors.darkGrey)),
-        actions: <Widget>[
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/search_icon.svg",
-              // By default our  icon color is white
-              color: AppColors.themeColor,
-            ),
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/cart_icon.svg",
-              // By default our  icon color is white
-              color: AppColors.themeColor,
-            ),
-            onPressed: () {
-              print('Cart Tab Bar');
-            },
-          ),
-          const SizedBox(width: kDefaultPaddin / 2)
-        ],
-      ),
       body: _children[currentIndex],
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(

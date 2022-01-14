@@ -270,7 +270,7 @@ class _ProductDetailState extends State<ProductDetail> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Text(counter.toString(),style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),),
+            child: Text(counter.toString(),style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: AppColors.NewprimaryColor),),
           ),
           InkWell(
             onTap: (){
